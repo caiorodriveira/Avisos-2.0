@@ -21,7 +21,7 @@ import lombok.Data;
 public class Aviso {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_aviso")
 	public Long id;
 	
@@ -33,13 +33,9 @@ public class Aviso {
 	
 	@Column(nullable = false)
 	public Date data;
-
 	
 	@ManyToOne
 	@JoinColumn(name = "id_usuario")
 	public Usuario usuario;
 	
-	
-	
-
 }
