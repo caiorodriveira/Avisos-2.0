@@ -15,7 +15,7 @@ public class Advice {
     public ResponseEntity<ExceptionDefault> tipoValorErrado() {
     	 HttpStatus status = HttpStatus.INTERNAL_SERVER_ERROR;
     	 String error = "Valor inválido";
-    	 
+    	 /*ajustar classe default e refazer lógica de controller advice*/
     	 
         ExceptionDefault ed = new ExceptionDefault();
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ed);
