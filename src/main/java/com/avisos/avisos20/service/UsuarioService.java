@@ -23,8 +23,15 @@ public class UsuarioService {
 		return repository.findById(id);
 	}
 	
-	public void save(Usuario usuario) {
+	public <S extends Usuario> S save(S usuario) {
 		repository.save(usuario);
+		return usuario;
 	}
+	
+	public void deleteById(Long id) {
+		repository.deleteById(id);
+	}
+ 	
+	
 
 }

@@ -26,5 +26,9 @@ public class AvisoService {
 	public <S extends Aviso> S save(S aviso) {
 		return repository.save(aviso);
 	}
+	
+	public void deleteById(Long id) {
+		repository.deleteById(id);
+	}
 
 }
